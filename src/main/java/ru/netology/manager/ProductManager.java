@@ -37,13 +37,15 @@ public class ProductManager {
             }
             return book.getAuthor().equalsIgnoreCase(search);
         }
-        if (product instanceof Smartphone) {
-            Smartphone smartphone = (Smartphone) product;
-            if (smartphone.getName().equalsIgnoreCase(search)) {
-                return true;
-            }
-            return smartphone.getVendor().equalsIgnoreCase(search);
-        }
+//        if (product instanceof Smartphone) {
+//            Smartphone smartphone = (Smartphone) product;
+//            if (smartphone.getName().equalsIgnoreCase(search)) {
+//                return true;
+//            }
+//            return smartphone.getVendor().equalsIgnoreCase(search);
+//        }
         return false;
     }
+
+
 }

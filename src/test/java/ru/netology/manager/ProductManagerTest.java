@@ -37,21 +37,23 @@ class ProductManagerTest {
 
     @Test
     public void shouldFindOneBook() {
-        manager.searchBy("alice");
+        manager.searchBy("Alice In Wonderland");
 
-        Product[] expected = new Product[] {aliceInWonderland};
-        Product[] actual = repository.findAll();
+        Product[] expected = new Product[] {aliceInWonderland, aliceInWonderland};
+        Product[] actual = manager.searchBy("Alice In Wonderland");
         assertArrayEquals(expected, actual);
 
     }
 
     @Test
-    public void shouldFindOneSmartphone() {
-        manager.searchBy("iPhone11");
+    public void shouldNotFindOneSmartphone() {
+        manager.searchBy("iPhone 11");
 
-        Product[] expected = new Product[] {iPhone11};
-        Product[] actual = manager.searchBy("iPhone11");
+        Product[] expected = new Product[] {};
+        Product[] actual = manager.searchBy("iPhone 11");
         assertArrayEquals(expected, actual);
 
     }
+
+
 }
