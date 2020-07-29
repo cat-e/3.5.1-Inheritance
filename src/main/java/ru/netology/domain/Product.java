@@ -40,13 +40,7 @@ public class Product {
     }
 
     public boolean matches(String search) {
-        Product product = new Product();
-        Book book = (Book) product;
-        if (book.getName().equalsIgnoreCase(search)) {
-            return true;
-        }
-        Smartphone smartphone = (Smartphone) product;
-        if (smartphone.getName().equalsIgnoreCase(search)) {
+        if (search.equalsIgnoreCase(getName())) {
             return true;
         }
         return false;

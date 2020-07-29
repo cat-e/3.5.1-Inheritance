@@ -25,7 +25,7 @@ class ProductTest {
     void matches() {
         boolean ans = true;
         boolean val;
-        String search = "Lewis Carrol";
+        String search = "Alice In Wonderland";
         Product product = new Product();
         val = product.matches(search);
         assertEquals(ans, val);

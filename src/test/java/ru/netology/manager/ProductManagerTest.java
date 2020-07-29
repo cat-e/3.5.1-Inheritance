@@ -45,10 +45,10 @@ class ProductManagerTest {
     }
 
     @Test
-    public void shouldNotFindOneSmartphone() {
+    public void shouldFindOneSmartphone() {
         manager.searchBy("iPhone 11");
 
-        Product[] expected = new Product[] {};
+        Product[] expected = new Product[] {iPhone11};
         Product[] actual = manager.searchBy("iPhone 11");
         assertArrayEquals(expected, actual);
 
