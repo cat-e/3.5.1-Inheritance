@@ -25,9 +25,9 @@ class SmartphoneTest {
     void matches() {
         boolean ans = true;
         boolean val;
-        String search = "iPhone 11";
-        Product product = new Product();
-        val = product.matches(search);
+        String search = "Apple";
+        Smartphone smartphone = new Smartphone(3, "iPhone 11", 85000, "Apple");
+        val = smartphone.matches(search);
         assertEquals(ans, val);
     }
 

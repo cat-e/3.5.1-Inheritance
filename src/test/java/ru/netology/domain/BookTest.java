@@ -25,9 +25,9 @@ class BookTest {
     void matches() {
         boolean ans = true;
         boolean val;
-        String search = "Alice In Wonderland";
-        Product product = new Product();
-        val = product.matches(search);
+        String search = "Lewis Carrol";
+        Book book = new Book(1, "Alice In Wonderland", 1000, "Lewis Carrol");
+        val = book.matches(search);
         assertEquals(ans, val);
     }
 }

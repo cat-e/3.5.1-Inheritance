@@ -26,7 +26,7 @@ class ProductTest {
         boolean ans = true;
         boolean val;
         String search = "Alice In Wonderland";
-        Product product = new Product();
+        Product product = new Product(1,"Alice In Wonderland",1000);
         val = product.matches(search);
         assertEquals(ans, val);
     }

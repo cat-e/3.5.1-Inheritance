@@ -16,13 +16,13 @@ public class Product {
         this.price = price;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     @Override
     public boolean equals(Object o) {
@@ -40,7 +40,7 @@ public class Product {
     }
 
     public boolean matches(String search) {
-        if (search.equalsIgnoreCase(getName())) {
+        if (search.equalsIgnoreCase(name)) {
             return true;
         }
         return false;

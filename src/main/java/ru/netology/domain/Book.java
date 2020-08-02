@@ -3,7 +3,6 @@ package ru.netology.domain;
 import java.util.Objects;
 
 public class Book extends Product {
-    private String name;
     private String author;
 
     public Book() {
@@ -15,15 +14,6 @@ public class Book extends Product {
         this.author = author;
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getAuthor() {
         return author;
@@ -35,18 +25,17 @@ public class Book extends Product {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Book book = (Book) o;
-        return Objects.equals(name, book.name) &&
-                Objects.equals(author, book.author);
+        return Objects.equals(author, book.author);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), name, author);
+        return Objects.hash(super.hashCode(), author);
     }
 
     public boolean matches(String search) {
         if (super.matches(search)) return true;
-        if (getAuthor().equalsIgnoreCase(search)) return true;
+        if (author.equalsIgnoreCase(search)) return true;
         return false;
     }
 }
